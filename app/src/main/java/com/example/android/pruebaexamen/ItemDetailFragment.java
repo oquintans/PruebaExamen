@@ -66,7 +66,13 @@ public class ItemDetailFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ItemListFragment frag = (ItemListFragment) getFragmentManager().findFragmentById(R.id.item_list);
+                if (frag == null || !frag.isInLayout()) {
+                    getActivity().finish();
+                } else {
                     ((TextView) rootView.findViewById(R.id.item_detail)).setText(" VACIO ");
+                }
+
             }
         });
         // Show the dummy content as text in a TextView.
