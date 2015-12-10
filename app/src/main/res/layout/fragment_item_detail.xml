@@ -1,7 +1,7 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
 
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -9,18 +9,18 @@
         android:id="@+id/item_detail"
         style="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button"
         android:padding="16dp"
         android:textIsSelectable="true"
-        tools:context=".ItemDetailFragment"
-        android:layout_above="@+id/button" />
+        tools:context=".ItemDetailFragment" />
 
     <Button
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        />
-</RelativeLayout>
+        android:text="New Button" />
+</LinearLayout>
+

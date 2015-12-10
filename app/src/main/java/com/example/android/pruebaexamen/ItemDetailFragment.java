@@ -58,6 +58,7 @@ public class ItemDetailFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         final View rootView = inflater.inflate(R.layout.fragment_item_detail, container, false);
 
 
@@ -65,10 +66,8 @@ public class ItemDetailFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((TextView) rootView.findViewById(R.id.item_detail)).setText(" VACIO ");
+                    ((TextView) rootView.findViewById(R.id.item_detail)).setText(" VACIO ");
             }
-
-
         });
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
